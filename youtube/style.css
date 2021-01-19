@@ -1,6 +1,14 @@
 :root {
   --bg-color: #000000;
   --basic-color: whitesmoke;
+  --addtional-color: rgb(102, 102, 102);
+  --accent-color: rgb(253, 31, 31);
+}
+
+button {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: 0;
 }
 
 body {
@@ -20,7 +28,7 @@ header {
 }
 
 header .logo i {
-  color: rgb(253, 31, 31);
+  color: var(--accent-color);
 }
 
 header .logo .title {
@@ -35,10 +43,7 @@ header .logo .title {
 }
 
 .icons button {
-  background-color: transparent;
   color: var(--basic-color);
-  border-color: transparent;
-  box-shadow: 0;
   padding: 0;
 }
 
@@ -52,10 +57,10 @@ header .logo .title {
 
 /* Video Info */
 .info {
-  padding: 0px 12px;
+  padding: 0px 0px;
 }
 .info .metadata {
-  padding: 8px 0px;
+  padding: 8px 12px;
 }
 /* hastags */
 .info .metadata .hashtags {
@@ -87,13 +92,16 @@ header .logo .title {
 /* views */
 .info .metadata .views {
   font-size: x-small;
+  color: var(--addtional-color);
 }
 
 /* actions */
 .info .actions {
-  padding: 4px 0;
+  padding: 8px 12px;
+  margin: 0;
   display: flex;
   justify-content: space-evenly;
+  border-bottom: 1px solid var(--addtional-color);
 }
 .info .actions li {
   float: left;
@@ -106,22 +114,72 @@ header .logo .title {
   border: none;
 }
 .info .actions i {
-  color: gray;
+  color: var(--addtional-color);
 }
 .info .actions span {
   margin-top: 12px;
-  color: gray;
+  color: var(--addtional-color);
 }
 
 /* channel */
 .info .channel {
   display: flex;
   justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--addtional-color);
 }
 .info .channel .metadata {
   float: left;
+  display: flex;
+  align-items: center;
+  padding: 0;
 }
 .info .channel .metadata img {
-  width: 60px;
+  height: 40px;
+  border-radius: 50%;
 }
+
+.info .metadata .info {
+  float: right;
+  padding: 0 8px;
+  height: 100%;
+}
+.info .metadata .info .name {
+}
+.info .metadata .info .subscriber {
+  display: flex;
+  font-size: smaller;
+  color: var(--addtional-color);
+}
+
+.info .channel .subscribe {
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
 /* Up next */
+.UpNext {
+  padding: 8px 12px;
+}
+.UpNext .title {
+  color: var(--addtional-color);
+}
+.UpNext ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.UpNext a {
+  text-decoration: none;
+}
+
+.UpNext .item li {
+  display: flex;
+  flex-direction: row;
+}
+.UpNext img {
+  width: 200px;
+  height: 120px;
+}
+.UpNext .item .info {
+}
