@@ -19,6 +19,10 @@ ul {
   list-style: none;
 }
 
+.title {
+  font-weight: 500;
+}
+
 /* Header */
 header {
   display: flex;
@@ -45,6 +49,10 @@ header .logo .title {
 .icons button {
   color: var(--basic-color);
   padding: 0;
+}
+.player video {
+  width: 100%;
+  height: auto;
 }
 
 /* Video Player */
@@ -101,7 +109,7 @@ header .logo .title {
   margin: 0;
   display: flex;
   justify-content: space-evenly;
-  border-bottom: 1px solid var(--addtional-color);
+  border-bottom: 1px solid rgb(184, 183, 183);
 }
 .info .actions li {
   float: left;
@@ -126,7 +134,7 @@ header .logo .title {
   display: flex;
   justify-content: space-between;
   padding: 8px 12px;
-  border-bottom: 1px solid var(--addtional-color);
+  border-bottom: 1px solid rgb(184, 183, 183);
 }
 .info .channel .metadata {
   float: left;
@@ -144,8 +152,7 @@ header .logo .title {
   padding: 0 8px;
   height: 100%;
 }
-.info .metadata .info .name {
-}
+
 .info .metadata .info .subscriber {
   display: flex;
   font-size: smaller;
@@ -155,13 +162,15 @@ header .logo .title {
 .info .channel .subscribe {
   text-transform: uppercase;
   color: var(--accent-color);
+  font-family: "Roboto", sans-serif;
 }
 
 /* Up next */
+/* Mobile Frist ->  / 768px / 1024px */
 .UpNext {
   padding: 8px 12px;
 }
-.UpNext .title {
+.UpNext span.title {
   color: var(--addtional-color);
 }
 .UpNext ul {
@@ -169,17 +178,34 @@ header .logo .title {
   display: flex;
   flex-direction: column;
 }
-.UpNext a {
-  text-decoration: none;
-}
-
-.UpNext .item li {
-  display: flex;
-  flex-direction: row;
-}
 .UpNext img {
   width: 200px;
   height: 120px;
 }
+.UpNext .item {
+  display: flex;
+  align-items: flex-start;
+}
 .UpNext .item .info {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  height: 120px;
+  padding: 0 12px;
+  color: var(--addtional-color);
+  font-size: small;
+}
+.UpNext .item .info .title {
+  color: black;
+  font-size: medium;
+}
+
+.UpNext .item {
+  display: flex;
+  padding-bottom: 30px;
+}
+
+/* Desktop 일때 */
+@media screen and (min-width: 1024px) {
 }
