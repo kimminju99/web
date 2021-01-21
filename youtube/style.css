@@ -3,12 +3,18 @@
   --basic-color: whitesmoke;
   --addtional-color: rgb(102, 102, 102);
   --accent-color: rgb(253, 31, 31);
+  --change-color: blue;
 }
 
-button {
-  background-color: transparent;
-  border-color: transparent;
-  box-shadow: 0;
+* {
+  box-sizing: border-box;
+}
+
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
 body {
@@ -30,6 +36,9 @@ header {
   justify-content: space-between;
   padding: 8px 12px;
 }
+header .logo {
+  font-size: larger;
+}
 
 header .logo i {
   color: var(--accent-color);
@@ -50,12 +59,17 @@ header .logo .title {
   color: var(--basic-color);
   padding: 0;
 }
+
+/* Video Player */
+.player {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color);
+}
 .player video {
   width: 100%;
   height: auto;
 }
-
-/* Video Player */
 @media screen and (max-aspect-ratio: 1219/685) {
   .player video {
     width: 100%;
@@ -121,9 +135,14 @@ header .logo .title {
   background-color: transparent;
   border: none;
 }
+
 .info .actions i {
   color: var(--addtional-color);
 }
+button i:active {
+  color: var(--change-color);
+}
+
 .info .actions span {
   margin-top: 12px;
   color: var(--addtional-color);
