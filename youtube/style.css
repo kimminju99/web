@@ -1,13 +1,20 @@
 :root {
   --bg-color: #000000;
-  --basic-color: whitesmoke;
-  --addtional-color: rgb(102, 102, 102);
-  --accent-color: rgb(253, 31, 31);
-  --change-color: blue;
+  --white-color: whitesmoke;
+  --darkgray-color: #6f6e6f;
+  --lightgray-color: #cacaca;
+  --accent-color: #e31110;
+  --change-color: #065fd5;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 button,
@@ -15,10 +22,7 @@ button:focus {
   border: none;
   cursor: pointer;
   outline: none;
-}
-
-body {
-  margin: 0;
+  background-color: transparent;
 }
 
 ul {
@@ -33,20 +37,17 @@ ul {
 header {
   display: flex;
   background-color: var(--bg-color);
+  color: var(--white-color);
   justify-content: space-between;
   padding: 8px 12px;
 }
 header .logo {
   font-size: larger;
+  font-weight: 800;
 }
 
 header .logo i {
   color: var(--accent-color);
-}
-
-header .logo .title {
-  color: var(--basic-color);
-  font-family: "Roboto", sans-serif;
 }
 
 .icons {
@@ -56,8 +57,8 @@ header .logo .title {
 }
 
 .icons button {
-  color: var(--basic-color);
-  padding: 0;
+  color: var(--white-color);
+  padding-left: 2px;
 }
 
 /* Video Player */
@@ -65,16 +66,13 @@ header .logo .title {
   position: sticky;
   top: 0;
   background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
 }
 .player video {
   width: 100%;
   height: auto;
-}
-@media screen and (max-aspect-ratio: 1219/685) {
-  .player video {
-    width: 100%;
-    height: auto;
-  }
+  max-width: 600px;
 }
 
 /* Video Info */
@@ -100,52 +98,48 @@ header .logo .title {
 .info .metadata .titleAndButton {
   display: flex;
   justify-content: space-between;
-  padding: 3px 0px;
 }
 .info .metadata .titleAndButton .title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
   font-size: large;
   margin-right: 4px;
 }
 .info .metadata .titleAndButton .moreBtn {
+  height: 100%;
   margin: 4px;
-  border: none;
-  background: none;
 }
 /* views */
 .info .metadata .views {
   font-size: x-small;
-  color: var(--addtional-color);
+  color: var(--darkgray-color);
+  padding-top: 4px;
 }
 
 /* actions */
 .info .actions {
-  padding: 8px 12px;
+  padding: 8px 0px;
   margin: 0;
   display: flex;
   justify-content: space-evenly;
-  border-bottom: 1px solid rgb(184, 183, 183);
+  border-bottom: 1px solid var(--lightgray-color);
 }
-.info .actions li {
-  float: left;
-}
+
 .info .actions button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: transparent;
-  border: none;
-}
-
-.info .actions i {
-  color: var(--addtional-color);
-}
-button i:active {
-  color: var(--change-color);
+  font-size: smaller;
+  color: var(--darkgray-color);
 }
 
 .info .actions span {
-  margin-top: 12px;
-  color: var(--addtional-color);
+  margin-top: 8px;
+}
+.actions button i:active {
+  color: var(--change-color);
 }
 
 /* channel */
@@ -175,7 +169,7 @@ button i:active {
 .info .metadata .info .subscriber {
   display: flex;
   font-size: smaller;
-  color: var(--addtional-color);
+  color: var(--darkgray-color);
 }
 
 .info .channel .subscribe {
@@ -190,7 +184,7 @@ button i:active {
   padding: 8px 12px;
 }
 .UpNext span.title {
-  color: var(--addtional-color);
+  color: var(--darkgray-color);
 }
 .UpNext ul {
   padding: 0;
@@ -212,7 +206,7 @@ button i:active {
   width: 260px;
   height: 120px;
   padding: 0 12px;
-  color: var(--addtional-color);
+  color: var(--darkgray-color);
   font-size: small;
 }
 .UpNext .item .info .title {
